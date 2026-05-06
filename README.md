@@ -1,5 +1,5 @@
-## Web site Domain: ➡️
-https://nekruzcse.github.io/Portfolio/
+Web site Domain: ➡️  https://nekruzcse.github.io/Portfolio/
+
 
 # Nekruz Jumanazarov — Portfolio
 
