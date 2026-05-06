@@ -8,7 +8,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -28,6 +28,7 @@ body {
     color: var(--text-color);
 }
 
+/* ===== HEADER ===== */
 .header {
     position: fixed;
     top: 0;
@@ -48,9 +49,6 @@ body {
 
 .logo {
     position: relative;
-    /* font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600; */
 }
 
 .logo img {
@@ -66,7 +64,7 @@ body {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 500;
-    margin-left: 3.5rem;
+    margin-left: 3rem;
     transition: .3s;
 }
 
@@ -88,8 +86,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-/* .....⬇️⬇️⬇️...................... Home section design ....................... */
-/* ................My.IMG.bg.................. */
+/* ===== HOME SECTION ===== */
 .home {
     display: flex;
     align-items: center;
@@ -224,7 +221,6 @@ section {
     width: 100%;
 }
 
-
 .home-sci {
     position: absolute;
     bottom: 4rem;
@@ -270,25 +266,7 @@ section {
     width: 100%;
 }
 
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 70px;
-    width: 45%;
-    height: 100%;
-    background: transparent;
-    /* border: 2px solid red; */
-    /* ⬆️ ................My img opacity....................... */
-    transition: 3s;
-}
-
-.home-imgHover:hover {
-    background: var(--bg-color);
-    opacity: .4;
-}
-/* .....⬆️⬆️⬆️...................... Home section design ....................... */
-
-/* .....⬇️⬇️⬇️.....................about section design ....................... */
+/* ===== ABOUT SECTION ===== */
 .about {
     display: flex;
     justify-content: center;
@@ -344,6 +322,7 @@ section {
 
 .about-content {
     text-align: center;
+    max-width: 70rem;
 }
 
 .about-content h3 {
@@ -356,6 +335,21 @@ section {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    line-height: 1.8;
+}
+
+.about-extra-hidden {
+    display: none;
+}
+
+.about-extra-visible {
+    display: block;
+}
+
+.about-extra-visible p {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .btn-box.btns {
@@ -366,10 +360,8 @@ section {
 .btn-box.btns a::before {
     background: var(--second-bg-color);
 }
-/* .....⬆️⬆️⬆️.....................about section design ....................... */
 
-/*......⬇️⬇️⬇️.................... education section design.................... */
-
+/* ===== EDUCATION SECTION ===== */
 .education {
     display: flex;
     justify-content: center;
@@ -383,6 +375,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    align-items: flex-start;
 }
 
 .education-row .education-column {
@@ -460,10 +453,8 @@ section {
     font-size: 1.6rem;
     padding-top: .5rem;
 }
-/*......⬆️⬆️⬆️.................... education section design.................... */
 
-
-/* .....⬇️⬇️⬇️.....................skills section design....................... */
+/* ===== SKILLS SECTION ===== */
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
@@ -551,50 +542,218 @@ section {
     background: var(--main-color);
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 95%;
-    /* HTML */
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span { width: 95%; }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span { width: 80%; }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span { width: 65%; }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span { width: 55%; }
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span { width: 70%; }
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span { width: 70%; }
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span { width: 50%; }
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span { width: 40%; }
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+    min-height: auto;
+    padding-bottom: 7rem;
+    position: relative;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 80%;
-    /* CSS */
+.projects h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 65%;
-    /* JavaSicript */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: stretch;
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 55%;
-    /* REACT */
+.project-card {
+    position: relative;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: calc(33.333% - 2rem);
+    min-width: 28rem;
+    transition: .3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 70%;
-    /* Web Design */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 171, 240, 0.05);
+    z-index: 0;
+    transition: .5s;
 }
 
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 70%;
-    /* Web Developerment */
+.project-card:hover::before {
+    width: 100%;
 }
 
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 50%;
-    /* Graphic Design */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 171, 240, 0.2);
 }
 
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 40%;
-    /* SEO Marketing */
+.project-icon {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
-/*......⬆️⬆️⬆️.................... skills section design.................... */
 
-/*......⬇️⬇️⬇️...................... contact section design................. */
+.project-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
 
+.project-card p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    opacity: 0.85;
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.project-tech span {
+    background: rgba(0, 171, 240, 0.15);
+    color: var(--main-color);
+    border: .1rem solid var(--main-color);
+    border-radius: 2rem;
+    padding: .3rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    padding: .6rem 1.4rem;
+    border-radius: .5rem;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* ===== FUTURE GOALS SECTION ===== */
+.future {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--second-bg-color);
+    position: relative;
+}
+
+.future h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.future-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.future-card {
+    background: var(--bg-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    width: calc(50% - 1.5rem);
+    min-width: 28rem;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.future-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 171, 240, 0.05);
+    z-index: 0;
+    transition: .5s;
+}
+
+.future-card:hover::before {
+    width: 100%;
+}
+
+.future-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 171, 240, 0.15);
+}
+
+.future-icon {
+    font-size: 4.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.future-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.future-card p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    opacity: 0.85;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== CONTACT SECTION ===== */
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
@@ -654,10 +813,10 @@ section {
     transition: .5s;
 }
 
-.contact form .input-box .input-field input:focus~.focus,
-.contact form .input-box .input-field input:valid~.focus,
-.contact form .textarea-field textarea:focus~.focus,
-.contact form .textarea-field textarea:valid~.focus {
+.contact form .input-box .input-field input:focus ~ .focus,
+.contact form .input-box .input-field input:valid ~ .focus,
+.contact form .textarea-field textarea:focus ~ .focus,
+.contact form .textarea-field textarea:valid ~ .focus {
     width: 100%;
 }
 
@@ -674,10 +833,32 @@ section {
 .contact form .btn-box.btns .btn {
     cursor: pointer;
 }
-/*......⬆️⬆️⬆️...................... contact section design................. */
 
-/*......⬆️⬆️⬆️.................... footer section design.................... */
+.form-status {
+    max-width: 70rem;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    font-size: 1.6rem;
+    text-align: center;
+    display: none;
+}
 
+.form-status.success {
+    display: block;
+    background: rgba(0, 171, 240, 0.1);
+    border: .2rem solid var(--main-color);
+    color: var(--main-color);
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(255, 80, 80, 0.1);
+    border: .2rem solid #ff5050;
+    color: #ff5050;
+}
+
+/* ===== FOOTER ===== */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -736,15 +917,13 @@ section {
     color: var(--main-color);
 }
 
-
-/* ANIMATION RELOAD AND SCROLL */
+/* ===== ANIMATIONS ===== */
 .animate {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    /* background: yellowgreen; */
     background: var(--bg-color);
     z-index: 98;
 }
@@ -779,77 +958,40 @@ section:nth-child(odd) .animate.scroll,
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
+.projects.show-animate .animate.scroll,
+.future.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
 
-.my_nuber {
-    width: 85%;
-    margin-top: 3rem;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-}
-
-.my_nuber h2 {
-    color: var(--text-color);
-    font-weight: 400;
-}
-
-.my_nuber h2 span {
-    color: var(--main-color);
-    font-weight: 500;
-}
-
-
-/*......⬇️⬇️⬇️...................... footer section design................. */
-
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
+    html { font-size: 55%; }
+    .navbar a { margin-left: 2rem; }
 }
 
 @media (max-width: 991px) {
-    .header {
-        padding: 2rem 4%;
-    }
-
-    section {
-        padding: 10rem 4% 2rem;
-    }
-
-    .home {
-        padding: 0 4%;
-    }
-
-    .footer {
-        padding: 2rem 4%;
-    }
+    .header { padding: 2rem 4%; }
+    section { padding: 10rem 4% 2rem; }
+    .home { padding: 0 4%; }
+    .footer { padding: 2rem 4%; }
+    .project-card { width: calc(50% - 1.5rem); }
 }
 
 @media (max-width: 850px) {
-    .animate.home-img {
-        width: 55%;
-    }
+    .animate.home-img { width: 55%; }
+    .project-card { width: 100%; }
+    .future-card { width: 100%; }
 }
 
 @media (max-width: 768px) {
-    .header {
-        background: var(--bg-color);
-    }
+    .header { background: var(--bg-color); }
 
-    .logo img {
-        width: 38px;
-        height: 38px;
-    }
+    .logo img { width: 38px; height: 38px; }
 
-    #menu-icon {
-        display: block;
-    }
+    #menu-icon { display: block; }
 
     .navbar {
         position: absolute;
@@ -901,32 +1043,6 @@ section:nth-child(odd) .animate.scroll,
         transition-delay: .25s;
     }
 
-    .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
-    }
-
-    .my_nuber {
-        width: 90%;
-        margin-top: 3rem;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .home-imgHover {
-        position: absolute;
-        bottom: 0;
-        right: 70px;
-        width: 45%;
-        height: 100%;
-        background: transparent;
-        /* border: 2px solid red; */
-        /* ⬆️ ................img opacity....................... */
-        transition: 3s;
-    }
-    
     .home {
         display: flex;
         align-items: center;
@@ -935,59 +1051,34 @@ section:nth-child(odd) .animate.scroll,
         background: url('./img/my.png') no-repeat;
         background-size: 100%;
         background-position: bottom;
-        /* border: 1px solid red; */
     }
 
-    .home.show-animate {
-        height: 100px;
-    }
+    .home.show-animate { height: 100px; }
 
+    .project-card { width: 100%; min-width: unset; }
+    .future-card { width: 100%; min-width: unset; }
+
+    .contact form .input-box .input-field { width: 100%; }
 }
 
 @media (max-width: 520px) {
-    html {
-        font-size: 50%;
-    }
+    html { font-size: 50%; }
 
-    /* .home-content h1 {
-        display: flex;
-        flex-direction: column;
-    } */
+    .home-sci { width: 160px; }
+    .home-sci a { width: 38px; height: 38px; }
 
-    .home-sci {
-        width: 160px;
-    }
-
-    .home-sci a {
-        width: 38px;
-        height: 38px;
-    }
+    .projects-container { gap: 2rem; }
+    .future-container { gap: 2rem; }
 }
 
 @media (max-width: 462px) {
-    .home-content h1 {
-        font-size: 5.2rem;
-    }
+    .home-content h1 { font-size: 5rem; }
 
-    .education {
-        padding: 10rem 4% 5rem 5%;
-    }
+    .education { padding: 10rem 4% 5rem 5%; }
 
-    .contact form .input-box .input-field {
-        width: 100%;
-    }
+    .footer { flex-direction: column-reverse; gap: 1.5rem; }
+    .footer p { text-align: center; }
 
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer p {
-        margin-top: 2rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 462px) {
     .home {
         justify-content: center;
     }
@@ -998,54 +1089,24 @@ section:nth-child(odd) .animate.scroll,
         flex-direction: column;
         text-align: center;
     }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
 }
 
-
-/* KEYFRAMES ANIMATION */
+/* ===== KEYFRAMES ===== */
 @keyframes homeBgText {
-    0%,
-    10%,
-    100% {
-        background-position: -33rem 0;
-    }
-    65%,
-    85% {
-        background-position: 0 0;
-    }
+    0%, 10%, 100% { background-position: -33rem 0; }
+    65%, 85% { background-position: 0 0; }
 }
 
 @keyframes homeCursorText {
-    0%,
-    10%,
-    100% {
-        width: 0;
-    }
-
-    65%,
-    78%,
-    85% {
-        width: 100%;
-        opacity: 1;
-    }
-
-    75%,
-    81% {
-        opacity: 0;
-    }
+    0%, 10%, 100% { width: 0; }
+    65%, 78%, 85% { width: 100%; opacity: 1; }
+    75%, 81% { opacity: 0; }
 }
 
 @keyframes aboutSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 @keyframes showRight {
-    100% {
-        width: 0;
-    }
+    100% { width: 0; }
 }
